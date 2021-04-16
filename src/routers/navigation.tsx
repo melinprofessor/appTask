@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Task from '../views/task';
+import Task from '../views/AddTask/task';
 import { FontAwesome5 } from '@expo/vector-icons';
 import List from '../views/list';
 

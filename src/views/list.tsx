@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, SafeAreaView} from 'react-native'
+import {View, Text, SafeAreaView, StyleSheet} from 'react-native'
 
 const List = () => {
     return (
@@ -8,5 +8,4 @@ const List = () => {
         </SafeAreaView>
     )
 }
-
 export default List;
