@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { View, Button, SafeAreaView, StyleSheet, Modal } from 'react-native';
 import ButtonAdd from '../../components/ButtonAdd';
 import ListTask from '../../components/ListTask';
+import Task, { Status } from '../../entity/Task'
 
-const Task = () => {
+const TaskView = () => {
   const [visible, setVisible] = useState(false);
   const toggleModal = () => {
     setVisible((t) => !t);
@@ -22,7 +23,7 @@ const Task = () => {
         </View>
       </Modal>
       <View style={styles.container}>
-        <ListTask list={lista} />
+        <ListTask list={lista.filter(t=> t.status === Status.PENDENTE || t.status === Status.NOVO)} />
         {!visible && <ButtonAdd onPress={toggleModal} />}
       </View>
     </SafeAreaView>
@@ -57,46 +58,46 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-export default Task;
+export default TaskView;
 
-const lista = [{
+const lista: Task[] = [{
   id: 1,
   title: 'Teste',
   description: 'TESTe',
-  status: true,
+  status: Status.CANCELADO,
 },
 {
   id: 2,
   title: 'Teste',
   description: 'TESTe',
-  status: true,
+  status: Status.CONCLUIDO,
 },
 {
   id: 3,
   title: 'Teste',
   description: 'TESTe',
-  status: true,
+  status: Status.PENDENTE,
 },{
   id: 4,
   title: 'Teste',
   description: 'TESTe',
-  status: true,
+  status: Status.CANCELADO,
 },
 {
   id: 1,
   title: 'Teste',
   description: 'TESTe',
-  status: true,
+  status:  Status.PENDENTE,
 },
 {
   id: 4,
   title: 'Teste',
-  description: 'TESTe',
-  status: true,
+  description: 'TESTe adasdasd da  asdasdas asdas dasasd asdas d a sddadasdasdasdsaddasdasdasdaasdasdasddasdsadasasdasd',
+  status:  Status.PENDENTE,
 },
 {
   id: 1,
   title: 'Teste',
   description: 'TESTe',
-  status: true,
+  status:  Status.NOVO,
 }]
