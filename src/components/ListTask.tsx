@@ -8,7 +8,7 @@ const ListTask: React.FC<{ list: Task[] }> = ({ list }) => {
   return (
     <ScrollView contentContainerStyle={{alignItems: 'center'}}>
       {list.map((task) => (
-        <ItemTask item={task} />
+        <ItemTask key={task.id} item={task} />
       ))}
     </ScrollView>
   );

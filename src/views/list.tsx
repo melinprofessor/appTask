@@ -45,7 +45,7 @@ const TaskView = () => {
           <Picker selectedValue={select}
           onValueChange={(item)=> setSelect(item.toString())}
           >
-          <Picker.Item label='Todos' value={''} />
+          <Picker.Item label='TODOS' value={''} />
             <Picker.Item label={Status.NOVO.toUpperCase()} value={Status.NOVO.toString()} />
             <Picker.Item label={Status.PENDENTE.toUpperCase()} value={Status.PENDENTE.toString()} />
             <Picker.Item label={Status.CONCLUIDO.toUpperCase()} value={Status.CONCLUIDO.toString()} />
@@ -113,19 +113,19 @@ const lista: Task[] = [{
   status: Status.CANCELADO,
 },
 {
-  id: 1,
+  id: 5,
   title: 'Teste',
   description: 'TESTe',
   status:  Status.PENDENTE,
 },
 {
-  id: 4,
+  id: 6,
   title: 'Teste',
   description: 'TESTe adasdasd da  asdasdas asdas dasasd asdas d a sddadasdasdasdsaddasdasdasdaasdasdasddasdsadasasdasd',
   status:  Status.PENDENTE,
 },
 {
-  id: 1,
+  id: 7,
   title: 'Teste',
   description: 'TESTe',
   status:  Status.NOVO,
